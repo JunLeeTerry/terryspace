@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<meta name="viewport" content="width=device-width ,initial-scale=1" />
+	<meta charset="utf-8" />
+	<title>{% block title %}{% endblock %}</title>
+	<link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="../static/resume/css/base.css" />
+	<script src="../static/bootstrap/js/jquery-1.11.2.min.js"></script>
+	<script src="../static/bootstrap/js/bootstrap.min.js"></script>
+	{% block link %}{% endblock %}
+	
+    </head>
+    <body>
+	<div id="whole_page">
+	  <!-- this is the nav bar part -->
+	    <nav class="navbar navbar-inverse navbar-fixed-top" id="topnav">
+		<div class="container-fluid">
+		    <div class="navbar-header">
+			<p class="navbar-brand"><a href="/">Terry</a></p>
+		    </div>
+		    <ul class="nav navbar-nav navbar-right" >
+			<li><a href="/blog">Blogs</a></li>
+            <li><a href="/lifeblog">Life</a></li>
+            <!--
+			<li><a href="/about">About</a></li>
+			-->
+		    </ul>
+		</div>
+	    </nav>
+	    {% block content %}{% endblock %}
+	</div>
+
+    </body>
+</html>

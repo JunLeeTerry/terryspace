@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block title %}
+blogs
+{% endblock %}
+{% block link%}
+<link rel="stylesheet" href="../static/resume/css/blogs.css" />
+
+{% endblock %}
+{% block content %}
+
+<div id="blog_background">
+    <div id="content_background">
+	
+	{% for blog in page_objects.object_list %}
+	<div id="blog_body">
+	    <div class="row">
+		<div class="col-md-2" id="blog_id">
+		    <p>{{blog.id}}</p>
+		</div> 
+		<div class ="col-md-10" id="blog_title">
+		    <h1>{{blog.title}}</h1>
+		    <p>{{blog.subtitle}}<p>
+		    <hr /></div>
+		
+	    </div>
+	    <div id="blog_info_list">
+		<ul>
+		    <li>Author:{{blog.author}}</li>
+		    <li>Classification:{{blog.classification}}</li>
+		    <li>Publish_time:{{blog.publish_time}}</li>
+		    <li>Update_time:{{blog.update_time}}<li>
+		</ul>
+	    </div>
+	    <div id="blog_content">
+		{{blog.content|safe}}
+	    </div>	
+	</div>
+	{% endfor %}
+	<div id="page_container">
+	    <p>
+		{% if page_objects.has_previous %}
+		<a href="?page={{ page_objects.previous_page_number }}" title="Pre"><=</a> 
+		{% else %}
+		<span><b><=</b></span> 
+		{% endif %}
+		
+		{% for p in page_range %}
+		{% ifequal p page_objects.number %}
+		<span><b>|{{p}}|</b></span>        
+		{% else %}<a href="?page={{p}}">|{{p}}|</a>{% endifequal %}
+		{% endfor %}     
+		{% if page_objects.has_next %}
+		<a href="?page={{ page_objects.next_page_number }}" title="Next">=></a>
+		{% else %}<span><b>=></b></span> 
+		{% endif %}  
+		<div id="page_total">
+		  <b>
+		    {%if page_objects.paginator.num_pages%}
+		    Total:
+		    {{ page_objects.paginator.num_pages }} 
+		    {%endif%}
+		  </b>
+		</div>
+	    </p>
+	</div>
+    </div>
+</div>
+{% endblock%}

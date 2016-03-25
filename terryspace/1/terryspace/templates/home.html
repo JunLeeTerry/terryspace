@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block title %}
+home
+{% endblock %}
+
+{% block link %}
+<link rel="stylesheet" href="../static/resume/css/home.css">
+{% endblock %}
+
+{% block content%}
+	    <!-- this is the background part -->
+	    <div id="home_introduction">
+		<!-- this is text part -->
+		<div id="home_intro_text">
+		    <h1>Welcome to terry's field.</h1>
+		    <p>Hello!</p>
+		    <p>My name is terry</p>
+		    <p>I am very glad that you can find my site.</p>
+		    <p>The site recodes crumbs when i am walking on the programmer road.</p>
+		    <!--
+		    <p>Please click 'Contact' on the upper right and give me some advise.</p>
+		    -->
+		</div>
+		<!-- this is logo part -->
+		<div id="home_intro_logo">
+		    <div id="home_logo">
+			<div id="innerline">
+			    <p>T</p>
+			</div>
+		    </div>
+		</div>
+	    </div>
+	    <!-- this is the project part -->
+	    <div id="project_tag">
+		<h1>Some Tags Of Knowledge-points</h1>
+		<h3>The tags are some field that i learned before.</h3>
+		<h3>You can click the images,and read some articles i written or collected before in that field.</h3>
+		<h3>Oh!Don't forget to give me some advice. :)</h3>
+		<div class="row">
+		    <div class="col-md-4" id="sub_project_tag">
+		      <a href="/eclipseblog/" >
+			<img src="../static/resume/img/eclipse.png" id="img_eclipse">
+		      </a>
+
+			<h2>Eclipse Plugin<br />&nbsp;</h2>
+			<h3>This is my first project.<br />I wrote and collect some articles about eclipse plugin project and RCP project</h3>
+		    </div>
+		    <div class="col-md-4" id="sub_project_tag">
+			<a href="/pythonblog/">
+			<img src="../static/resume/img/python.png" id="img_python" >
+			</a>
+			<h2>Program Language</h2>
+			<h2>-Python<h2>
+			    <h3>Python is one of my favourite programe languages.Because it is really easy to learn and use</h3>
+		    </div>
+		    <div class="col-md-4" id="sub_project_tag">
+			<a href="/javablog/">
+			<img src="../static/resume/img/java.jpg" id="img_java">
+			</a>
+			<h2>Programe Language</h2>
+			<h2>-Java</h2>
+			<h3>Java is first object-oriented languration i learned.It is used in many field like web and mobile</h3>
+		    </div>
+		</div>
+	    </div>
+	    
+	    <!-- this is the footer part -->
+	    <div id="footer">
+		<hr />
+		<p>Designed and built by terry.</p>
+		<p>You can send email to me.The email address is </p>
+		<p><a href="mailto:terry_love_c@sina.com">email:terry_love_c@sina.com</a></p>
+	    </div>
+{% endblock %}

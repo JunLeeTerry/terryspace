@@ -1,0 +1,17 @@
+.navbar-brand a{
+    text-decoration:none; 
+    font-weight:700;
+    color:white;
+}
+.navbar-brand a:hover{
+    text-decoration:none;
+    font-weight:700;
+    color:white;
+    
+}
+nav{
+    height:40px;
+    padding-left:5%;
+    padding-right:5%;
+    clear:both;
+}
